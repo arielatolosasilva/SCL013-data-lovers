@@ -11,7 +11,7 @@ button.addEventListener ("click", function() {
     alert("Entrar");
   });
 
- document.getElementById("inicio").innerHTML='<img src="./imagenes/logo6.png" />';
+ //document.getElementById("inicio").innerHTML='<img src="./imagenes/logo6.png" />';
 
   //let contenedorLogoInicio = document.createElement ("div");
  // contenedorLogoInicio.setAttribute("id", "logoInicio");
