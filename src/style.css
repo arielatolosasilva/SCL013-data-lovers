@@ -1,0 +1,59 @@
+body {
+    background-image: url(imagenes/ecopetit.cat-grey-cloud-wallpaper-1771080.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+button {
+
+/* Entrar */
+
+font-family: Marcellus SC;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 60px;
+text-align: center;
+
+border: 1px solid #D9A508;
+color: #D9A508;
+
+
+
+/* Rectangle 1 */
+
+position: absolute;
+width: 262px;
+height: 64.15px;
+left: 625px;
+top: 625px;
+border-radius: 30px;
+
+
+  }
+  
+  .logoInicio{ 
+    position: absolute;
+    width: 810px;
+    height: 302px;
+    left: 350px;
+    top: 174px;
+    
+  }
+  #firstPage{
+    position: absolute;
+    width: 679px;
+    height: 56px;
+    left: calc(50% - 679px/2 + 14.5px);
+    top: 476px;
+    
+    font-family: Marcellus SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center ;
+    color: #D9A508;
+
+  }
