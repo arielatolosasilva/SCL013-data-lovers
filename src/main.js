@@ -1,6 +1,15 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/potter/potter.js';
 
 console.log(example, data);
+
+
+function menuDesplegable() {
+    var x = document.getElementById("myMenú");
+    if (x.className === "menú") {
+      x.className += " responsive";
+    } else {
+      x.className = "menú";
+    }
+  }
+  

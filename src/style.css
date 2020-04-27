@@ -1,0 +1,131 @@
+body {
+    text-align: center;
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Footer -->*/
+footer#footer {
+    background-color: #333333;
+  }
+  div.footer-text{
+    text-align: center;
+    margin-top: 10px;
+  }
+  p#footer-text {
+    padding-top: 15px;
+    color:white;
+  }
+  /*<-- Footer*/
+
+img.logoPrincipal {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+
+.tituloEntrada {
+    position: absolute;
+    width: 679px;
+    height: 56px;
+    left: calc(50% - 679px/2 + 14.5px);
+    font-family: Marcellus SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #BF930D;
+}
+
+.botonEntrar{
+    position: absolute;
+    width: 262px;
+    height: 64.15px;
+    left: 570px;
+    top: 350px;
+    border-radius: 30px;
+    font-family: Marcellus SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #D9A508;
+    color: #D9A508;
+}
+
+/*----------- PAG INICIO ----------  */
+
+img.tituloHP {
+    width: 526.66px;
+    height: 180.36px;
+}
+
+img.Logo {
+    position: absolute;
+    height: 64px;
+    left: -13px;
+    top: 3px;
+}
+
+p.textoInicio {
+    width: 1138px;
+    height: 271.03px;
+    font-family: Marcellus SC;
+    font-size: 20px;
+    color: #000000;
+    margin: auto;
+}
+
+.menú {
+    background-color: #3333337d;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    height: 63px;
+    border: solid 1px;
+}
+
+.menú a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menú a.active {
+    background-color: #333333;
+}
+
+.menú .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .menú a:not(:first-child) {display: none;}
+    .menú a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menú.responsive {position: relative;}
+    .menú.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menú.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
