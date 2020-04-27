@@ -1,3 +1,6 @@
+import { example } from './data.js';
+import data from './data/potter/potter.js';
+
 
 import POTTER from './data/potter/potter.js';
 //crear boton
@@ -33,6 +36,15 @@ button.addEventListener ("click", function() {
   let  currentDiv = document.getElementById("firstPage"); 
   document.body.insertBefore(newDiv, currentDiv); 
 
- 
-  
+
+
 console.log(example, data);
+
+function menuDesplegable() {
+    var x = document.getElementById("myMenú");
+    if (x.className === "menú") {
+      x.className += " responsive";
+    } else {
+      x.className = "menú";
+    }
+  }
