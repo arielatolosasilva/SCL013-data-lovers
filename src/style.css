@@ -1,13 +1,55 @@
 body {
-    background-image: url(imagenes/ecopetit.cat-grey-cloud-wallpaper-1771080.png); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+  background-image: url(imagenes/ecopetit.cat-grey-cloud-wallpaper-1771080.png); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
-button {
+#logo1{
+  /* logo 1 */
 
-/* Entrar */
+position: absolute;
+width: 810px;
+height: 302px;
+left: 315px;
+top: 174px;
+
+}
+
+#video1{
+  /* logo 1 */
+
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  left: 460px;
+  top: 550px;
+
+}
+
+
+#textoPagina1{
+  /* Conoce el mundo de harry potter */
+
+position: absolute;
+width: 679px;
+height: 56px;
+left: calc(50% - 679px/2 - 24.5px);
+top: 473px;
+
+font-family: Marcellus SC;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 50px;
+text-align: center;
+
+
+}
+
+#entrar{
+
+  /* Entrar */
 
 font-family: Marcellus SC;
 font-style: normal;
@@ -30,30 +72,38 @@ left: 625px;
 top: 625px;
 border-radius: 30px;
 
+}
 
-  }
+#header{
+  position: absolute;
+width: 1600px;
+height: 107px;
+left: 0px;
+top: 30px;
+
+background: rgba(182, 162, 162, 0.29);
+border: 1px solid #000000;
+box-sizing: border-box;
+
+}
+#logo{
+
+width: 1491px;
+height: 124px;
+left: -51px;
+top: 30px;
+
+}
+#nav ul li{
+  float: left;
+  margin-top: 20px;
+}
+
+#nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
   
-  .logoInicio{ 
-    position: absolute;
-    width: 810px;
-    height: 302px;
-    left: 350px;
-    top: 174px;
-    
-  }
-  #firstPage{
-    position: absolute;
-    width: 679px;
-    height: 56px;
-    left: calc(50% - 679px/2 + 14.5px);
-    top: 476px;
-    
-    font-family: Marcellus SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center ;
-    color: #D9A508;
-
-  }
+}

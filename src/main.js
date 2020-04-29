@@ -1,50 +1,68 @@
-import { example } from './data.js';
-import data from './data/potter/potter.js';
-
 
 import POTTER from './data/potter/potter.js';
-//crear boton
-let  button = document.createElement("button");
+
+
+//document.getElementById("seccionMensajes").style.display="block";  //mostrar
+
+let div = document.createElement('div');
+div.id = 'pagina1';
+
+document.body.appendChild(div);
+
+document.getElementById("pagina1").innerHTML='<img id="logo1" src="./imagenes/logo6.png" />';
+
+let parrafo = document.createElement("p");
+parrafo.id = 'textoPagina1'
+let texto = document.createTextNode("Conoce el Mundo de Harry Potter.");
+parrafo.appendChild(texto);
+
+let elemento = document.getElementById("pagina1");
+elemento.appendChild(parrafo);
+
+let button = document.createElement("button");
+button.id = 'entrar'
 button.innerHTML = "Entrar";
-//se añade al body
-let body = document.getElementsByTagName("body")[0];
-body.appendChild(button);
-//controlador de evento
+
+div.appendChild(button);
+
+let div2 = document.createElement('div');
+div2.id = 'pagina2';
+
+document.body.appendChild(div2);
+
+document.getElementById("pagina2").innerHTML='<img id="logo1" src="./imagenes/logoharrypotter 1.png" />';
+
+let parrafo2 = document.createElement("p");
+parrafo2.id = 'textoPagina2'
+let texto2 = document.createTextNode("Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​");
+parrafo2.appendChild(texto2);
+
+let elemento2 = document.getElementById("pagina2");
+elemento2.appendChild(parrafo2);
+
+document.getElementById("pagina2").style.display="none"; //esconder
+document.getElementById("header").style.display="none"; //esconder
+
+
 button.addEventListener ("click", function() {
-    alert("Entrar");
-  });
+  document.getElementById("pagina2").style.display="block";
+  document.getElementById("header").style.display="block"; 
 
- //document.getElementById("inicio").innerHTML='<img src="./imagenes/logo6.png" />';
+  document.getElementById("pagina1").style.display="none"; //esconder
 
-  //let contenedorLogoInicio = document.createElement ("div");
- // contenedorLogoInicio.setAttribute("id", "logoInicio");
-  //let img = document.createElement('img');
-//img.src = './imagenes/logo6.png';
-//document.getElementById('logoInicio').appendChild(img)
+});
+/*
+var vid = document.createElement("video");
+vid.setAttribute("src", "./video/hpv.mp4");
+vid.setAttribute("id", "video1");
+vid.autoplay = true;
+vid.load();
 
-//let currentContenedorLogoInicio = document.getElementById("logoInicio"); 
-//document.body.insertBefore(contenedorLogoInicio, currentContenedorLogoInicio); 
-
-
-  let newDiv = document.createElement("div"); 
-  newDiv.setAttribute("id", "firstPage");
-  let newContent = document.createTextNode("Conoce el Mundo de Harry Potter"); 
-  newDiv.appendChild(newContent); //añade texto al div creado. 
-  
-
-  // añade el elemento creado y su contenido al DOM 
-  let  currentDiv = document.getElementById("firstPage"); 
-  document.body.insertBefore(newDiv, currentDiv); 
+elemento2.appendChild(vid);*/
 
 
 
-console.log(example, data);
 
-function menuDesplegable() {
-    var x = document.getElementById("myMenú");
-    if (x.className === "menú") {
-      x.className += " responsive";
-    } else {
-      x.className = "menú";
-    }
-  }
+
+
+
