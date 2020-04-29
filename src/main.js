@@ -1,5 +1,5 @@
 
-import POTTER from './data/potter/potter.js';
+import potter from './data/potter/potter.js';
 
 
 //document.getElementById("seccionMensajes").style.display="block";  //mostrar
