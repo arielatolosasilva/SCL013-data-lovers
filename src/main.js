@@ -1,5 +1,22 @@
 
-import potter from './data/potter/potter.js';
+import harryData  from './data/potter/potter.js';
+console.log(harryData.length);
+
+
+for (var i = 0; i < harryData.length; ++i) {
+ 
+  let div = document.createElement('div');
+div.id = 'd'+i;
+//div.classList = 'tarjetaPersonaje';
+
+document.body.appendChild(div);
+ var id_div = 'd'+i;
+document.getElementById(id_div).innerHTML='<img class="tarjetaPersonaje" src='+harryData[i].image+' />';
+ // console.log(harryData[i].name);
+ // console.log(harryData[i].image);
+
+   
+}
 
 
 //document.getElementById("seccionMensajes").style.display="block";  //mostrar
@@ -25,12 +42,14 @@ button.innerHTML = "Entrar";
 
 div.appendChild(button);
 
+
+
 let div2 = document.createElement('div');
 div2.id = 'pagina2';
 
 document.body.appendChild(div2);
 
-document.getElementById("pagina2").innerHTML='<img id="logo1" src="./imagenes/logoharrypotter 1.png" />';
+document.getElementById("pagina2").innerHTML='<img id="logo2" src="./imagenes/logoharrypotter 1.png" />';
 
 let parrafo2 = document.createElement("p");
 parrafo2.id = 'textoPagina2'
@@ -40,13 +59,15 @@ parrafo2.appendChild(texto2);
 let elemento2 = document.getElementById("pagina2");
 elemento2.appendChild(parrafo2);
 
-document.getElementById("pagina2").style.display="none"; //esconder
 document.getElementById("header").style.display="none"; //esconder
+document.getElementById("pagina2").style.display="none"; //esconder
+
 
 
 button.addEventListener ("click", function() {
-  document.getElementById("pagina2").style.display="block";
   document.getElementById("header").style.display="block"; 
+  document.getElementById("pagina2").style.display="block";
+ 
 
   document.getElementById("pagina1").style.display="none"; //esconder
 
@@ -59,7 +80,7 @@ vid.autoplay = true;
 vid.load();
 
 elemento2.appendChild(vid);*/
-
+ 
 
 
 
