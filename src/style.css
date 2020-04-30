@@ -23,7 +23,7 @@ top: 174px;
   width: 600px;
   height: 500px;
   left: 460px;
-  top: 550px;
+  top: 490px;
 
 }
 
@@ -73,18 +73,21 @@ top: 625px;
 border-radius: 30px;
 
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 #header{
-  position: absolute;
-width: 1600px;
-height: 107px;
-left: 0px;
-top: 30px;
-
+ 
+width: 100%;
 background: rgba(182, 162, 162, 0.29);
 border: 1px solid #000000;
-box-sizing: border-box;
+height: 107px;
 
+
+}
+#nav{
+  text-align: center;
 }
 #logo{
 
@@ -92,18 +95,43 @@ width: 1491px;
 height: 124px;
 left: -51px;
 top: 30px;
-
-}
-#nav ul li{
-  float: left;
-  margin-top: 20px;
+float: left;
 }
 
-#nav ul li a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px;
-  
+.tarjetaPersonaje{
+
+  padding: 10px; margin: 10px; border: 2px solid black; float: left; width: 250px;
+}
+   
+
+#logo2{
+  /* logoharrypotter 1 */
+
+position: absolute;
+width: 526.66px;
+height: 180.36px;
+left: 473px;
+top: 154px;
+
+background: url(logoharrypotter.png);
+
+}
+#textoPagina2{
+  /* Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico. Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​ */
+
+position: absolute;
+width: 1138px;
+height: 271.03px;
+left: 167px;
+top: 344.97px;
+
+font-family: Marcellus SC;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+/* or 100% */
+text-align: center;
+
+
 }
