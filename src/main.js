@@ -2,38 +2,38 @@ import harryData from './data/potter/potter.js';
 console.log(harryData);
 
 
-crear_elemento('div', 'pagina1', 'root');
-crear_elemento('IMG', "logo1", "pagina1", '', '', "./imagenes/logo6.png");
-crear_elemento('p', 'textoPagina1', 'pagina1', '', "Conoce el Mundo de Harry Potter.");
-crear_elemento('button', 'entrar', 'pagina1', '', "Entrar");
-crear_elemento('div', 'pagina3', 'root');
-crear_elemento('div', 'pagina2', 'root');
-crear_elemento('IMG', "logo2", "pagina2", '', '', "./imagenes/logoharrypotter 1.png");
-var textoResumenHistoria = "Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​";
-crear_elemento('p', 'textoPagina2', 'pagina2', '', textoResumenHistoria);
+crearElement('div', 'pageOne', 'root');
+crearElement('IMG', "logoOne", "pageOne", '', '', "./imagenes/logo6.png");
+crearElement('p', 'textPageOne', 'pageOne', '', "Conoce el Mundo de Harry Potter.");
+crearElement('button', 'enter', 'pageOne', '', "Entrar");
+crearElement('div', 'pageThree', 'root');
+crearElement('div', 'pageTwo', 'root');
+crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/logoharrypotter 1.png");
+const textSummaryHistory = "Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​";
+crearElement('p', 'textPageTwo', 'pageTwo', '', textSummaryHistory);
 
 //empieza creacion modal
-//function crear_elemento(tipo, id, id_padre, clase, texto, rutaSrc) {
-  crear_elemento('div', 'modalPersonajes', 'root','modal');
-  crear_elemento('div', 'contenidoModal', 'modalPersonajes','cModal');
-  crear_elemento('div', 'headerModal', 'contenidoModal','hModal');
-  crear_elemento('div', 'bodyModal', 'contenidoModal','bModal');
-  crear_elemento('div', 'footerModal', 'contenidoModal','fModal');
-  crear_elemento('button', 'cierreModal', 'footerModal', '','Salir');
+//function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
+  crearElement('div', 'modalCharacters', 'root','modal');
+  crearElement('div', 'contentModal', 'modalCharacters','cModal');
+  crearElement('div', 'headerModal', 'contentModal','hModal');
+  crearElement('div', 'bodyModal', 'contentModal','bModal');
+  crearElement('div', 'footerModal', 'contentModal','fModal');
+  crearElement('button', 'closeModal', 'footerModal', '','Salir');
 
 //termina creacion modal
 
 const header= document.getElementById("header");
-const pag1= document.getElementById("pagina1");
-const pag2= document.getElementById("pagina2");
-const buttonEntrar= document.getElementById("entrar");
-const buttonMenuPersonajes = document.getElementById("menuPersonajes");
-const buttonSalirModal = document.getElementById("cierreModal");
-const modal = document.getElementById('modalPersonajes');
+const pag1= document.getElementById("pageOne");
+const pag2= document.getElementById("pageTwo");
+const buttonEnter= document.getElementById("enter");
+const buttonMenuCharacters = document.getElementById("menuCharacters");
+const buttonExitModal = document.getElementById("closeModal");
+const modal = document.getElementById('modalCharacters');
 header.style.display = "none"; //esconder
 pag2.style.display = "none"; //esconder
 
-buttonEntrar.addEventListener ("click", function() {
+buttonEnter.addEventListener ("click", function() {
 
   header.style.display="block";
   pag2.style.display="block";
@@ -43,24 +43,24 @@ buttonEntrar.addEventListener ("click", function() {
 
 
 
-buttonMenuPersonajes.addEventListener ("click", function() {
+buttonMenuCharacters.addEventListener ("click", function() {
 
-document.getElementById("pagina2").style.display="none";
-  removeElement('pagina3');
-  crear_elemento('div', 'pagina3', 'root');
-  getDataPersonajes();
+document.getElementById("pageTwo").style.display="none";
+  removeElement('pageThree');
+  crearElement('div', 'pageThree', 'root');
+  getDataCharacters();
 
 });
 
-  buttonSalirModal.addEventListener ("click", function() {
+buttonExitModal.addEventListener ("click", function() {
 
     modal.style.display = "none";
-  removeElement('dataPersonajes');
+  removeElement('dataCharacters');
 
 
   });
 
-function crear_elemento(tipo, id, id_padre, clase, texto, rutaSrc) {
+function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
   let elememto = document.createElement(tipo);
   if (typeof id !== 'undefined' && id != '') {
     elememto.id = id;
@@ -90,20 +90,20 @@ function removeElement(elementId) {
 
 }
 
-function getDataPersonajes() {
+function getDataCharacters() {
 
-  crear_elemento('div', 'filtro', 'pagina3');
-  crear_elemento('div', 'selector', 'filtro','select');
+  crearElement('div', 'filter', 'pageThree');
+  crearElement('div', 'selector', 'filter','select');
 
-  crear_elemento('select', 'filtroGenero', 'selector','Filtroselect');
-  crear_elemento('option', '', 'filtroGenero', '', "Seleccione Genero");
-  crear_elemento('option', '', 'filtroGenero', '', "Femenino");
-  crear_elemento('option', '', 'filtroGenero', '', "Masculino");
+  crearElement('select', 'filterGenero', 'selector','Filtroselect');
+  crearElement('option', '', 'filterGenero', '', "Seleccione Genero");
+  crearElement('option', '', 'filterGenero', '', "Femenino");
+  crearElement('option', '', 'filterGenero', '', "Masculino");
 
-  crear_elemento('select', 'filtroRol', 'selector','Filtroselect');
-  crear_elemento('option', '', 'filtroRol', '', "Seleccione Rol");
-  crear_elemento('option', '', 'filtroRol', '', "Estudiante");
-  crear_elemento('option', '', 'filtroRol', '', "Profesor");
+  crearElement('select', 'filterRol', 'selector','Filtroselect');
+  crearElement('option', '', 'filterRol', '', "Seleccione Rol");
+  crearElement('option', '', 'filterRol', '', "Estudiante");
+  crearElement('option', '', 'filterRol', '', "Profesor");
 
 
 
@@ -113,19 +113,19 @@ function getDataPersonajes() {
     let id_parrf = 'pNom' + i;
     let id_img = 'imgPers' + i;
 
-    crear_elemento('div', id_div, 'pagina3', 'pergamino');
-    crear_elemento('IMG', id_img, id_div, 'tarjetaPersonaje', '', harryData[i].image);
-    crear_elemento('p', id_parrf, id_div, 'parrafoName', harryData[i].name);
+    crearElement('div', id_div, 'pageThree', 'parchment');
+    crearElement('IMG', id_img, id_div, 'characterCard', '', harryData[i].image);
+    crearElement('p', id_parrf, id_div, 'parrafoName', harryData[i].name);
 
     const btnImg= document.getElementById(id_img);
     const contador= i;
     btnImg.addEventListener ("click", function() {
 
-      removeElement('dataPersonajes');
+      removeElement('dataCharacters');
       modal.style.display = "block";
-      crear_elemento('div', 'dataPersonajes', 'bodyModal','infoPersonajes');
-      crear_elemento('IMG', "imagenMo", "dataPersonajes", 'tarjetaPersonajeModal', '', harryData[contador].image);
-      crear_elemento('p', 'nombreModal', 'dataPersonajes', '', harryData[contador].name);
+      crearElement('div', 'dataCharacters', 'bodyModal','infoPersonajes');
+      crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', harryData[contador].image);
+      crearElement('p', 'nameModal', 'dataCharacters', '', harryData[contador].name);
 
     });
 
