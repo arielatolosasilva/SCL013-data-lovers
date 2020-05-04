@@ -1,30 +1,65 @@
 
 import harryData  from './data/potter/potter.js';
-console.log(harryData.length);
+//console.log(harryData);
+
+let div3 = document.createElement('div');
+div3.id = 'pagina3';
+let elemntoTodo = document.getElementById("root");
+
+elemntoTodo.appendChild(div3);
+
+
+let elemento3 = document.getElementById("pagina3");
 
 
 for (var i = 0; i < harryData.length; ++i) {
- 
+  
   let div = document.createElement('div');
-div.id = 'd'+i;
-//div.classList = 'tarjetaPersonaje';
+  div.id = 'd'+i;
+  div.classList = 'pergamino';
 
-document.body.appendChild(div);
- var id_div = 'd'+i;
-document.getElementById(id_div).innerHTML='<img class="tarjetaPersonaje" src='+harryData[i].image+' />';
- // console.log(harryData[i].name);
- // console.log(harryData[i].image);
+  elemento3.appendChild(div);
+
+
+  var id_div = 'd'+i;
+  document.getElementById(id_div).innerHTML='<img  class="tarjetaPersonaje " src='+harryData[i].image+' />';
+
+
+//empieza crear parrafo con nombre
+
+let parrafo = document.createElement("p");
+parrafo.id = 'pNom'+i;
+parrafo.classList = 'parrafoName';
+let texto = document.createTextNode(harryData[i].name);
+parrafo.appendChild(texto);
+
+let elemento = document.getElementById(id_div);
+elemento.appendChild(parrafo);
+
+//termina crear parrafo con nombre
+
+var arrayWand = harryData[i].wand;
+
+console.log(arrayWand.wood);
+ 
 
    
 }
 
 
+/*function create_element(tipo,id,clase){
+  let div = document.createElement(tipo);
+  div.id = id;
+  div.classList = clase;
+}*/
+
 //document.getElementById("seccionMensajes").style.display="block";  //mostrar
 
 let div = document.createElement('div');
 div.id = 'pagina1';
+elemntoTodo.appendChild(div);
 
-document.body.appendChild(div);
+//document.body.appendChild(div);
 
 document.getElementById("pagina1").innerHTML='<img id="logo1" src="./imagenes/logo6.png" />';
 
@@ -46,8 +81,8 @@ div.appendChild(button);
 
 let div2 = document.createElement('div');
 div2.id = 'pagina2';
-
-document.body.appendChild(div2);
+elemntoTodo.appendChild(div2);
+//document.body.appendChild(div2);
 
 document.getElementById("pagina2").innerHTML='<img id="logo2" src="./imagenes/logoharrypotter 1.png" />';
 
@@ -61,7 +96,7 @@ elemento2.appendChild(parrafo2);
 
 document.getElementById("header").style.display="none"; //esconder
 document.getElementById("pagina2").style.display="none"; //esconder
-
+document.getElementById("pagina3").style.display="none"; //esconder
 
 
 button.addEventListener ("click", function() {
@@ -80,9 +115,9 @@ vid.autoplay = true;
 vid.load();
 
 elemento2.appendChild(vid);*/
- 
 
-pruebaaaaaaa
+
+
 
 
 
