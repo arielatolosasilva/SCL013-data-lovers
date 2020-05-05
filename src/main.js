@@ -1,5 +1,5 @@
 import harryData from './data/potter/potter.js';
-console.log(harryData);
+//console.log(harryData);
 
 
 crearElement('div', 'pageOne', 'root');
@@ -29,6 +29,7 @@ const pag2= document.getElementById("pageTwo");
 const buttonEnter= document.getElementById("enter");
 const buttonMenuCharacters = document.getElementById("menuCharacters");
 const buttonExitModal = document.getElementById("closeModal");
+
 const modal = document.getElementById('modalCharacters');
 header.style.display = "none"; //esconder
 pag2.style.display = "none"; //esconder
@@ -45,7 +46,7 @@ buttonEnter.addEventListener ("click", function() {
 
 buttonMenuCharacters.addEventListener ("click", function() {
 
-document.getElementById("pageTwo").style.display="none";
+  document.getElementById("pageTwo").style.display="none";
   removeElement('pageThree');
   crearElement('div', 'pageThree', 'root');
   getDataCharacters();
@@ -53,14 +54,13 @@ document.getElementById("pageTwo").style.display="none";
 });
 
 buttonExitModal.addEventListener ("click", function() {
-
-    modal.style.display = "none";
+  modal.style.display = "none";
   removeElement('dataCharacters');
+});
 
 
-  });
 
-function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
+function crearElement(tipo, id, id_padre, clase, texto, rutaSrc,optionValue) {
   let elememto = document.createElement(tipo);
   if (typeof id !== 'undefined' && id != '') {
     elememto.id = id;
@@ -72,6 +72,10 @@ function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
   if (typeof rutaSrc !== 'undefined') {
     elememto.src = rutaSrc;
   }
+  if(tipo === 'option' && typeof optionValue !== 'undefined'){
+    elememto.value=optionValue;
+  }
+
   if (typeof texto !== 'undefined') {
     let texto2 = document.createTextNode(texto);
     elememto.appendChild(texto2);
@@ -83,7 +87,7 @@ function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
 
 function removeElement(elementId) {
 
-  if ( document.getElementById(elementId)) {
+  if (document.getElementById(elementId)) {//solo cuando exista el elemento se podrá borrar o remover del html(formato del if(está instruccion es true o false)
     var element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
   }
@@ -96,41 +100,74 @@ function getDataCharacters() {
   crearElement('div', 'selector', 'filter','select');
 
   crearElement('select', 'filterGenero', 'selector','Filtroselect');
-  crearElement('option', '', 'filterGenero', '', "Seleccione Genero");
-  crearElement('option', '', 'filterGenero', '', "Femenino");
-  crearElement('option', '', 'filterGenero', '', "Masculino");
+  crearElement('option', '', 'filterGenero', '', "Todos los generos",'','all');
+  crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
+  crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
 
   crearElement('select', 'filterRol', 'selector','Filtroselect');
-  crearElement('option', '', 'filterRol', '', "Seleccione Rol");
-  crearElement('option', '', 'filterRol', '', "Estudiante");
-  crearElement('option', '', 'filterRol', '', "Profesor");
+  crearElement('option', '', 'filterRol', '', "Todos los roles",'','all');
+  crearElement('option', '', 'filterRol', '', "Estudiante",'','estudent');
+  crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
+
+  listCharacterPotter (harryData);//cuando hace click en personajes
 
 
+//de aqui para adelante es cuando el usuario cambia el selector genero
+  const selectGender = document.getElementById("filterGenero");
 
-  for (var i = 0; i < harryData.length; ++i) {
+  selectGender.addEventListener("change", function() {//cuando cambie el selector genero
+
+    removeData();//invocamos funcion que remueve todos los div de las tarjetas de los personajes generados en el bucle
+    if(selectGender.value == 'all'){//aqui el usuario eligió todos los generos
+      listCharacterPotter (harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
+    }else{
+      let arrayFiltrado = window.data.filterGender(harryData,selectGender.value);
+      listCharacterPotter(arrayFiltrado);
+      //si no es all, se invoca la funcion del data js llamada filterGender, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
+    }
+  });
+
+
+}
+
+function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
+
+  for (let i = 0; i < arrayCharacterPotter.length; ++i) {
+
 
     let id_div = 'd' + i;
     let id_parrf = 'pNom' + i;
     let id_img = 'imgPers' + i;
 
+
     crearElement('div', id_div, 'pageThree', 'parchment');
-    crearElement('IMG', id_img, id_div, 'characterCard', '', harryData[i].image);
-    crearElement('p', id_parrf, id_div, 'parrafoName', harryData[i].name);
+    crearElement('IMG', id_img, id_div, 'characterCard', '', arrayCharacterPotter[i].image);
+    crearElement('p', id_parrf, id_div, 'parrafoName', arrayCharacterPotter[i].name);
 
     const btnImg= document.getElementById(id_img);
     const contador= i;
-    btnImg.addEventListener ("click", function() {
+
+    btnImg.addEventListener ("click", function() {//click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
 
       removeElement('dataCharacters');
       modal.style.display = "block";
       crearElement('div', 'dataCharacters', 'bodyModal','infoPersonajes');
-      crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', harryData[contador].image);
-      crearElement('p', 'nameModal', 'dataCharacters', '', harryData[contador].name);
+      crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', arrayCharacterPotter[contador].image);
+      crearElement('p', 'nameModal', 'dataCharacters', '', arrayCharacterPotter[contador].name);
+
 
     });
 
-   // var arrayWand = harryData[i].wand;
+    // var arrayWand = arrayCharacterPotter[i].wand;
     //console.log(arrayWand.wood);
 
+  }
+
+}
+
+function removeData(){
+  for (let i= 0; i<harryData.length; i++){
+    let id_div = 'd' + i;
+    removeElement(id_div);
   }
 }
