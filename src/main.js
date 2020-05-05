@@ -144,7 +144,7 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
     crearElement('IMG', id_img, id_div, 'characterCard', '', arrayCharacterPotter[i].image);
     crearElement('p', id_parrf, id_div, 'parrafoName', arrayCharacterPotter[i].name);
 
-    const btnImg= document.getElementById(id_img);
+    const btnImg= document.getElementById(id_div);
     const contador= i;
 
     btnImg.addEventListener ("click", function() {//click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
