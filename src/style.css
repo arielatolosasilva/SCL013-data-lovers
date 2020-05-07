@@ -1,3 +1,4 @@
+
 body {
   background-image: url(imagenes/fondo.png);
   background-position: center center;
@@ -130,7 +131,7 @@ li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  
+
 }
 
 #pageThree {

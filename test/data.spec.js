@@ -1,9 +1,9 @@
 import { example, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterGender', () => {
   test('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof 'filterGender).toBe('function');
   });
 
   test('returns `example`', () => {

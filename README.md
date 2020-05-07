@@ -21,7 +21,7 @@ el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
 Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
 precedentes.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
+No obstante, los datos por sí mismos son de poca utilidad. Para qu           esas
 grandes cantidades de datos se conviertan en **información** fácil de leer para
 los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
 hacerlo es creando _interfaces_ y _visualizaciones_.
@@ -113,7 +113,7 @@ Revisa la lista y reflexiona sobre los objetivos que conseguiste en el proyecto 
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
 ### Soft skills
-- [ ] **Planificación, organización y manejo del tiempo** Organizarse utilizando historias de usuario, haciendo una estimación general de los tiempos que se necesitarán para la realización del proyecto. Conocer las ceremonias y artefactos ágiles (sprint planning, dailys, retrospectiva, tablero al menos, etc) a pesar de que no se utilicen con regularidad. 
+- [ ] **Planificación, organización y manejo del tiempo** Organizarse utilizando historias de usuario, haciendo una estimación general de los tiempos que se necesitarán para la realización del proyecto. Conocer las ceremonias y artefactos ágiles (sprint planning, dailys, retrospectiva, tablero al menos, etc) a pesar de que no se utilicen con regularidad.
 
 - [ ] **Trabajo en equipo** Trabajar con otros de forma colaborativa y en base a un objetivo común, entregando ideas para la construcción del proyecto
 

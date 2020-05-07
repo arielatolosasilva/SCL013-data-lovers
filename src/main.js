@@ -135,7 +135,7 @@ function getDataCharacters() {
   });
 
 //de aqui para adelante es cuando el usuario cambia el selector rol
-  const selectRol = document.gelElemntById("filterRol");
+ /* const selectRol = document.gelElemntById("filterRol");
 
   selectRol.addEventListener("change", function(){
 
@@ -143,9 +143,9 @@ function getDataCharacters() {
     if(selectRol.valua == 'all'){
       listCharacterPotter(harryData);
     }else{
-      let filtradoRol = 
+      let filtradoRol =
     }
-  })
+  })*/
 
 
 
