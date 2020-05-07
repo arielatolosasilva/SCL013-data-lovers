@@ -4,11 +4,12 @@ import harryData from './data/potter/potter.js';
 
 crearElement('div', 'pageOne', 'root');
 crearElement('IMG', "logoOne", "pageOne", '', '', "./imagenes/logo6.png");
-crearElement('p', 'textPageOne', 'pageOne', '', "Conoce el Mundo de Harry Potter.");
+crearElement('p', 'textPageOne', 'pageOne', '', "Conoce el Mundo de Harry Potter");
 crearElement('button', 'enter', 'pageOne', '', "Entrar");
 crearElement('div', 'pageThree', 'root');
 crearElement('div', 'pageTwo', 'root');
-crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/logoharrypotter 1.png");
+// crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/logoharrypotter 1.png");
+crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/tituloHistoriaVideo.png");
 const textSummaryHistory = "Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​";
 crearElement('p', 'textPageTwo', 'pageTwo', '', textSummaryHistory);
 
@@ -19,7 +20,7 @@ crearElement('p', 'textPageTwo', 'pageTwo', '', textSummaryHistory);
   crearElement('div', 'headerModal', 'contentModal','hModal');
   crearElement('div', 'bodyModal', 'contentModal','bModal');
   crearElement('div', 'footerModal', 'contentModal','fModal');
-  crearElement('button', 'closeModal', 'footerModal', '','Salir');
+  crearElement('p', 'closeModal', 'footerModal', '','X');
 
 //termina creacion modal
 
@@ -96,18 +97,24 @@ function removeElement(elementId) {
 
 function getDataCharacters() {
 
+  // crearElement('p', 'tittlePageThree', 'pageThree', '', "Filtrar por");
   crearElement('div', 'filter', 'pageThree');
   crearElement('div', 'selector', 'filter','select');
 
   crearElement('select', 'filterGenero', 'selector','Filtroselect');
-  crearElement('option', '', 'filterGenero', '', "Todos los generos",'','all');
+  crearElement('option', '', 'filterGenero', '', "Seleccione un género",'','all');
   crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
   crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
 
   crearElement('select', 'filterRol', 'selector','Filtroselect');
-  crearElement('option', '', 'filterRol', '', "Todos los roles",'','all');
+  crearElement('option', '', 'filterRol', '', "Seleccione un rol",'','all');
   crearElement('option', '', 'filterRol', '', "Estudiante",'','estudent');
   crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
+
+  crearElement('select', 'filterOrdenAlfabetic', 'selector','Filtroselect');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione un orden",'','all');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Ascendente (A-Z)",'','az');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Descendente (Z-A)",'','za');
 
   listCharacterPotter (harryData);//cuando hace click en personajes
 
@@ -126,6 +133,20 @@ function getDataCharacters() {
       //si no es all, se invoca la funcion del data js llamada filterGender, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
     }
   });
+
+//de aqui para adelante es cuando el usuario cambia el selector rol
+  const selectRol = document.gelElemntById("filterRol");
+
+  selectRol.addEventListener("change", function(){
+
+    removeData();
+    if(selectRol.valua == 'all'){
+      listCharacterPotter(harryData);
+    }else{
+      let filtradoRol = 
+    }
+  })
+
 
 
 }
@@ -150,11 +171,14 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
     btnImg.addEventListener ("click", function() {//click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
 
       removeElement('dataCharacters');
-      modal.style.display = "block";
+      modal.style.display = "flex";
       crearElement('div', 'dataCharacters', 'bodyModal','infoPersonajes');
       crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', arrayCharacterPotter[contador].image);
-      crearElement('p', 'nameModal', 'dataCharacters', '', arrayCharacterPotter[contador].name);
-
+      crearElement('p', 'nameModal', 'dataCharacters', '', "Nombre:" + " " + arrayCharacterPotter[contador].name);
+      crearElement('p', 'nameModal', 'dataCharacters', '', "Fecha nacimiento:" + " " + arrayCharacterPotter[contador].dateOfBirth);
+      crearElement('p', 'nameModal', 'dataCharacters', '', "Ascendencia:" + " " + arrayCharacterPotter[contador].ancestry);
+      crearElement('p', 'nameModal', 'dataCharacters', '', "Color de ojos: " + " " + arrayCharacterPotter[contador].eyeColour);
+      crearElement('p', 'nameModal', 'dataCharacters', '', "Color de pelo: " + " " + arrayCharacterPotter[contador].hairColour);
 
     });
 

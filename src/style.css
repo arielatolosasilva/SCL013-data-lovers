@@ -4,31 +4,25 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
 }
 
-/*@media only screen and (max-width: 767px) {
-  body {
-    background-image: url(imagenes/ecopetit.cat-grey-cloud-wallpaper-1771080.png);
-  }
-}*/
-
-
-.logo{ /*logo del header */
-  width: 316px;
-  height: 103px;
+.logo {
+  /*logo del header */
+  width: 20vw;
   float: left;
   margin-left: -34px;
-  position: absolute;
-  top: 10px;
 }
 
-header{
-  background: #ffffff;
-  width: 100%;
-  height:130px;
+img.letrasImgMenu {
+  height: 6vw;
+}
 
-  /*position: fixed;*/
+header {
+  width: 100%;
+  height: 17vh;
   top: 29px;
   left: 0;
   z-index: 9999999;
@@ -36,95 +30,62 @@ header{
   border: 1px solid #000000;
   box-sizing: border-box;
 }
-ul{
-  float:right;
+
+ul {
+  float: right;
 }
+
 li {
-position: relative;
   display: inline;
-  padding: 15px;
-  top:0px;
-  right: 30px;
-
+  padding: 10px;
 }
-#root{
+
+#root {
   margin-top: 60px;
-
-width: 100%;
-
-height: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
-#logoOne{
+#logoOne {
   /* logo 1 */
-
-position: absolute;
-width: 810px;
-height: 302px;
-left: 315px;
-top: 174px;
-margin-top: 100px;
-margin-left: 60px;
+  width: 810px;
+  height: 302px;
 }
 
-#video1{
-  /* logo 1 */
+#textPageOne {
+  /* Conoce el mundo de harry potter */
+  font-family: Marcellus SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+}
 
-  position: absolute;
+#video1 {
+  display: flex;
   width: 600px;
   height: 500px;
   left: 460px;
   top: 490px;
-
 }
 
-
-#textPageOne{
-  /* Conoce el mundo de harry potter */
-
-position: absolute;
-width: 679px;
-height: 56px;
-left: calc(50% - 679px/2 - 24.5px);
-top: 473px;
-
-font-family: Marcellus SC;
-font-style: normal;
-font-weight: normal;
-font-size: 40px;
-line-height: 50px;
-text-align: center;
-
-
-}
-
-#enter{
-
+#enter {
   /* Entrar */
-
-font-family: Marcellus SC;
-font-style: normal;
-font-weight: normal;
-font-size: 48px;
-line-height: 60px;
-text-align: center;
-
-border: 1px solid #D9A508;
-color: #D9A508;
-
-/* Rectangle 1 */
-
-position: absolute;
-width: 262px;
-height: 64.15px;
-left: 625px;
-top: 625px;
-border-radius: 30px;
-
+  font-family: Marcellus SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
+  border: 1px solid #7b572d;
+  width: 15vw;
+  border-radius: 30px;
+  background: -webkit-linear-gradient(#232121, #4b534f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.parchment{
-
+.parchment {
   background-image: url(./imagenes/perg.png);
   width: 330px;
   height: 350px;
@@ -136,70 +97,59 @@ border-radius: 30px;
   animation-duration: 3s;
   animation-iteration-count: 1;
   animation-name: ghost;
-
-
 }
-.characterCard{
-
- margin: 50px auto 0px auto;
-    width: 134px;
-    height: 177px;
-    border: 3px solid #000000;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-
+.characterCard {
+  margin: 50px auto 0px auto;
+  width: 134px;
+  height: 177px;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
-
-#logoTwo{
+#logoTwo {
   /* logoharrypotter 1 */
-
-position: absolute;
-width: 526.66px;
-height: 180.36px;
-left: 473px;
-top: 154px;
-
-background: url(logoharrypotter.png);
-
+  width: 526.66px;
+  height: 180.36px;
+  left: 473px;
+  top: 154px;
+  /* background: url(logoharrypotter.png); */
 }
-#textPageTwo{
+
+#textPageTwo {
   /* Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico. Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​ */
-
-position: absolute;
-width: 1138px;
-height: 271.03px;
-left: 167px;
-top: 344.97px;
-
-font-family: Marcellus SC;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-/* or 100% */
-text-align: center;
-
-
+  width: 67vw;
+  font-family: Marcellus SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: -webkit-linear-gradient(#191d2f, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
 }
 
-#pageThree{
-
+#pageThree {
   justify-content: space-around;
   align-content: center;
   display: flex;
   flex-wrap: wrap;
   font-weight: 400;
-
-  position:absolute;
-  top:250px;
-
+  position: absolute;
+  top: 250px;
 }
 
+p#tittlePageThree {
+  font-size: 35px;
+  margin: 13px auto -30px auto;
+  font-family: Marcellus SC;
+}
 
-#filter{
-  background: #ffffff;
+#filter {
   width: 100%;
   height: 80px;
   position: unset;
@@ -209,33 +159,34 @@ text-align: center;
   background: rgba(182, 162, 162, 0.29);
   border: 1px solid #000000;
   box-sizing: border-box;
-  margin-top: -100px;
+  margin-top: -75px;
 }
 
-.Filtroselect{
+.Filtroselect {
   background: rgba(182, 162, 162, 0.29);
-border: 1px solid #000000;
-box-sizing: border-box;
-width: 262px;
-height: 50.15px;
--webkit-appearance: none;
-margin-left: 370px;
-margin-top: 15px;
-
-font-family: Marcellus SC;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-/* or 67% */
-
-text-align: center;
-
-color: #000000;
-
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  width: 262px;
+  height: 50.15px;
+  -webkit-appearance: none;
+  font-family: Marcellus SC;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  margin-top: 15px;
 }
 
-#modalCharacters{
+select#filterGenero {
+  margin-right: 200px;
+  padding: 5px;
+}
+
+select#filterRol {
+  margin-left: 200px;
+  padding: 5px;
+}
+
+#modalCharacters {
   display: none; /* Hidden by default */
   z-index: 999999999;
   position: fixed;
@@ -244,50 +195,49 @@ color: #000000;
   bottom: 0;
   left: 0;
   cursor: pointer;
-
   justify-content: center;
   align-items: center;
+  background-color: #00000059;
 }
 
-
-#contentModal{
-
-width: 60%;
-height: 70%;
-margin-top: 60px;
-padding: 10px 50px;
-position: relative;
-z-index: 999999999;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-cursor: default;
-background-image: url('imagenes/fichaPersnjmodal.png');
-background-size: cover;
-border-radius: 20px;
+#contentModal {
+  width: 60%;
+  height: 70%;
+  margin-top: 150px;
+  padding: 10px 50px;
+  z-index: 999999999;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  cursor: default;
+  background-image: url("imagenes/fichaPersnjmodal.png");
+  background-size: cover;
+  border-radius: 20px;
+  margin:auto;
 }
-.cardModal{
-
+.cardModal {
   margin: 10px;
   float: left;
   width: 250px;
   width: 134px;
   height: 177px;
   left: 65px;
-  top: 421px;
-  margin-top: 60px;
-  margin-left: 96px;
+  margin-top: 8px;
+  margin-left: 130px;
   border: 3px solid #000000;
   box-sizing: border-box;
   border-radius: 5px;
-
 }
-/* ---------------- MEDIAQUERIES MENU ------------------ */
 
-@media (max-width: 991px) and (min-width: 768px){
+/* ---------------- MEDIAQUERIES ------------------ */
 
-  header {
-    width: 133%;
-    height: 130px;
+@media only screen and (max-width: 40em) {
+
+  body {
+    height: 0vh;
+    width: 100vw;
+    text-align: center;
+    margin-top: 52px;
   }
+
 }

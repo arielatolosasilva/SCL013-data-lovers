@@ -17,6 +17,9 @@ window.data = {
 
   }
 
+  filterRol: function(arrayDataPotter,){
+
+  }
 }
 
 export default window.data;
