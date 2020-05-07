@@ -94,7 +94,7 @@ function removeElement(elementId) {
 
 }
 
-function getDataCharacters() {
+function getDataCharacters() {//empiez
 
   crearElement('div', 'filter', 'pageThree');
   crearElement('div', 'selector', 'filter','select');
@@ -128,7 +128,13 @@ function getDataCharacters() {
   });
 
 
-}
+
+
+}//ter
+
+
+
+
 
 function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
 
@@ -150,10 +156,12 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
     btnImg.addEventListener ("click", function() {//click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
 
       removeElement('dataCharacters');
-      modal.style.display = "block";
+      modal.style.display = "flex";
       crearElement('div', 'dataCharacters', 'bodyModal','infoPersonajes');
       crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', arrayCharacterPotter[contador].image);
       crearElement('p', 'nameModal', 'dataCharacters', '', arrayCharacterPotter[contador].name);
+
+      crearElement('p', 'nameModal', 'dataCharacters', '',"color de ojo =" +  arrayCharacterPotter[contador].eyeColour);
 
 
     });
@@ -171,3 +179,4 @@ function removeData(){
     removeElement(id_div);
   }
 }
+
