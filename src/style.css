@@ -6,15 +6,16 @@ body {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+
   text-align: center;
 }
-
 .logo {
   /*logo del header */
   width: 20vw;
-  float: left;
-  margin-left: -34px;
+  float:left;
+  margin-left:-34px;
+
+
 }
 
 img.letrasImgMenu {
@@ -22,6 +23,7 @@ img.letrasImgMenu {
 }
 
 header {
+
   width: 100%;
   height: 17vh;
   top: 29px;
@@ -33,14 +35,15 @@ header {
 }
 
 ul {
-  float: right;
+
+float:right;
+
 }
 
 li {
   display: inline;
   padding: 10px;
 }
-
 #root {
   margin-top: 60px;
   width: 100%;
@@ -63,8 +66,13 @@ li {
   font-size: 40px;
 }
 
-#video1 {
+#contentVideo{
   display: flex;
+  align-items: center;
+justify-content: center;
+}
+#videoPresentation {
+
   width: 600px;
   height: 500px;
   left: 460px;
@@ -82,6 +90,7 @@ li {
   width: 15vw;
   border-radius: 30px;
   background: -webkit-linear-gradient(#232121, #4b534f);
+  font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -127,6 +136,7 @@ li {
   line-height: 20px;
   text-align: center;
   background: -webkit-linear-gradient(#191d2f, #000000);
+  font-weight: bold;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -144,7 +154,7 @@ li {
   top: 250px;
 }
 
-p#tittlePageThree {
+#tittlePageThree {
   font-size: 35px;
   margin: 13px auto -30px auto;
   font-family: Marcellus SC;
