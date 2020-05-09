@@ -44,7 +44,8 @@ Que al hacer click en la foto de cada personaje, aparezcan ciertas caracteristic
 
 #### Prototipo de baja fidelidad
 El prototipo de baja fidelidad fue realizado en Invision
-![imagen a mostrar](imagenes_readme/prototipadobaja.jpg)
+![indexpage](src/prototipadobaja.jpg)
+
 
 
 [link]:(https://ariela457345.invisionapp.com/overview/datahp-ck99z9xng0ecy019mxk80odjw/screens?v=vIOlyu%2BeOSQ%2Fx39aUpwuzQ%3D%3D&linkshare=urlcopied)
@@ -53,7 +54,9 @@ El prototipo de baja fidelidad fue realizado en Invision
 #### Prototipo de alta fidelidad
 Despues de realizar un testeo al prototipio de baja fidelidad, se realizaron varios cambios que
 estan plasmados en el prototipo de alta filedidad que realizamos con figma
+
 Aca podemos ver algunas capturas del prototipado.
+
 ![imagen a mostrar](imagenes_readme/alta1.jpg)
 ![imagen a mostrar](imagenes_readme/alta2.jpg)
 ![imagen a mostrar](imagenes_readme/alta3.jpg)
