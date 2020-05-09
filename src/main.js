@@ -98,7 +98,7 @@ function removeElement(elementId) {
 
 }
 
-function getDataCharacters() {
+function getDataCharacters() {//empiez
 
   // crearElement('p', 'tittlePageThree', 'pageThree', '', "Filtrar por");
   crearElement('div', 'filter', 'pageThree');
@@ -155,7 +155,13 @@ selectRol.addEventListener("change", function() {//cuando cambie el selector gen
 
 
 
-}
+
+
+}//ter
+
+
+
+
 
 function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
 
