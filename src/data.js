@@ -19,25 +19,9 @@ window.data = {
 
   filterRol: function(arrayDataPotter,rol){
     const arrFilterData = [];
-    const tipoStudent;
-    const tipoTeacher;
-    if (rol == 'student') {
-      tipoStudent = true;
-      tipoTeacher = false;
-    } else if (rol == 'teacher') {
-      tipoStudent = false;
-      tipoTeacher = true;
-    }  else if (rol == 'other') {
-      tipoStudent = false;
-      tipoTeacher = false;
-    }
-
-
-
-
     if (rol == 'student') {
       for (let i= 0; i<arrayDataPotter.length; i++){
-      if (arrayDataPotter[i].hogwartsStudent === tipoStudent && arrayDataPotter[i].hogwartsStaff === tipoTeacher){
+      if (arrayDataPotter[i].hogwartsStudent === true && arrayDataPotter[i].hogwartsStaff === false){
            arrFilterData.push({
              name: arrayDataPotter[i].name,
              image: arrayDataPotter[i].image

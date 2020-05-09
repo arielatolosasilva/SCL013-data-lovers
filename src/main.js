@@ -109,7 +109,7 @@ function getDataCharacters() {//empiez
   crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
   crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
 
-  crearElement('select', 'filterRol', 'selector','Filtroselect');
+ crearElement('select', 'filterRol', 'selector','Filtroselect');
   crearElement('option', '', 'filterRol', '', "Seleccione un rol",'','all');
   crearElement('option', '', 'filterRol', '', "Estudiante",'','student');
   crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
@@ -147,8 +147,8 @@ selectRol.addEventListener("change", function() {//cuando cambie el selector gen
   if(selectRol.value == 'all'){//aqui el usuario eligió todos los generos
     listCharacterPotter (harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
   }else{
-    let arrayFiltrado = window.data.filterRol(harryData,selectRol.value);
-    listCharacterPotter(arrayFiltrado);
+  let arrayFiltrado = window.data.filterRol(harryData,selectRol.value);
+   listCharacterPotter(arrayFiltrado);
     //si no es all, se invoca la funcion del data js llamada filterGender, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
   }
 });
