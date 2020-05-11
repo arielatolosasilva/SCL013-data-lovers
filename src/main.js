@@ -6,22 +6,22 @@ crearElement('div', 'pageOne', 'root');
 crearElement('IMG', "logoOne", "pageOne", '', '', "./imagenes/logo6.png");
 crearElement('p', 'textPageOne', 'pageOne', '', "Conoce el Mundo de Harry Potter");
 crearElement('button', 'enter', 'pageOne', '', "Entrar");
-crearElement('div', 'pageThree', 'root');
 crearElement('div', 'pageTwo', 'root');
 // crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/logoharrypotter 1.png");
 crearElement('IMG', "logoTwo", "pageTwo", '', '', "./imagenes/tituloHistoriaVideo.png");
 const textSummaryHistory = "Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.Desde el lanzamiento de la primera novela, Harry Potter y la piedra filosofal, en 1997, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.1​ Para julio de 2013 se habían vendido entre 400 y 450 millones de ejemplares de los siete libros, que los ubican como la serie de libros más vendida de la historia y los cuales han sido traducidos a más de 65 idiomas, entre los que se incluyen el latín y el griego antiguo.​ El séptimo y último libro, Harry Potter y las reliquias de la Muerte, fue lanzado mundialmente en inglés el 21 de julio de 2007, mientras que en español se publicó el 21 de febrero de 2008.​";
 crearElement('p', 'textPageTwo', 'pageTwo', '', textSummaryHistory);
-
+crearElement('div', 'pageThree', 'root');
 
 //empieza creacion modal
 //function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
   crearElement('div', 'modalCharacters', 'root','modal');
   crearElement('div', 'contentModal', 'modalCharacters','cModal');
   crearElement('div', 'headerModal', 'contentModal','hModal');
+  crearElement('p', 'closeModal', 'headerModal', '','X');
   crearElement('div', 'bodyModal', 'contentModal','bModal');
   crearElement('div', 'footerModal', 'contentModal','fModal');
-  crearElement('p', 'closeModal', 'footerModal', '','X');
+
 
 //termina creacion modal
 
@@ -39,10 +39,10 @@ pag2.style.display = "none"; //esconder
 buttonEnter.addEventListener ("click", function() {
   crearElement('div', 'contentVideo', 'pageTwo');
   crearElement('video', "videoPresentation", "contentVideo", '', '', "./video/hpv.mp4");
-  header.style.display="block";
+  header.style.display="flex";
   pag2.style.display="block";
   pag1.style.display="none";
-  document.getElementById('videoPresentation').play();
+  //document.getElementById('videoPresentation').play();
 
 });
 
@@ -109,13 +109,18 @@ function getDataCharacters() {//empiez
   crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
   crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
 
- crearElement('select', 'filterRol', 'selector','Filtroselect');
+  crearElement('div', 'selector2', 'filter','select');
+
+
+ crearElement('select', 'filterRol', 'selector2','Filtroselect');
   crearElement('option', '', 'filterRol', '', "Seleccione un rol",'','all');
   crearElement('option', '', 'filterRol', '', "Estudiante",'','student');
   crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
   crearElement('option', '', 'filterRol', '', "Otros",'','other');
 
-  crearElement('select', 'filterOrdenAlfabetic', 'selector','Filtroselect');
+  crearElement('div', 'selector3', 'filter','select');
+
+  crearElement('select', 'filterOrdenAlfabetic', 'selector3','Filtroselect');
   crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione un orden",'','all');
   crearElement('option', '', 'filterOrdenAlfabetic', '', "Ascendente (A-Z)",'','az');
   crearElement('option', '', 'filterOrdenAlfabetic', '', "Descendente (Z-A)",'','za');
@@ -139,6 +144,8 @@ function getDataCharacters() {//empiez
   });
 
 //de aqui para adelante es cuando el usuario cambia el selector rol
+
+
 const selectRol = document.getElementById("filterRol");
 
 selectRol.addEventListener("change", function() {//cuando cambie el selector genero
@@ -153,12 +160,24 @@ selectRol.addEventListener("change", function() {//cuando cambie el selector gen
   }
 });
 
+const selectOrder = document.getElementById("filterOrdenAlfabetic");
+selectOrder.addEventListener("change", function() {
 
+  removeData();
+  if(selectOrder.value == 'all'){
+    listCharacterPotter (harryData);
+  }else if(selectOrder.value == 'az'){
+   let arrayFiltrado = window.data.filterOrderAsc(harryData);
+   listCharacterPotter(arrayFiltrado);
 
-
+  }else if(selectOrder.value == 'za'){
+   let arrayFiltradoASC = window.data.filterOrderAsc(harryData);
+   let arrayFiltrado = window.data.filterOrderDesc(arrayFiltradoASC);
+   listCharacterPotter(arrayFiltrado);
+  }
+});
 
 }//ter
-
 
 
 
@@ -166,7 +185,6 @@ selectRol.addEventListener("change", function() {//cuando cambie el selector gen
 function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
 
   for (let i = 0; i < arrayCharacterPotter.length; ++i) {
-
 
     let id_div = 'd' + i;
     let id_parrf = 'pNom' + i;
