@@ -49,8 +49,7 @@ El prototipo de baja fidelidad fue realizado en Invision
 ![imagen](/src/imagenes_readme/prototipadobaja.jpg)
 
 
-
-[link]:(https://ariela457345.invisionapp.com/overview/datahp-ck99z9xng0ecy019mxk80odjw/screens?v=vIOlyu%2BeOSQ%2Fx39aUpwuzQ%3D%3D&linkshare=urlcopied)
+(https://ariela457345.invisionapp.com/overview/datahp-ck99z9xng0ecy019mxk80odjw/screens?v=vIOlyu%2BeOSQ%2Fx39aUpwuzQ%3D%3D&linkshare=urlcopied)
 
 
 #### Prototipo de alta fidelidad
@@ -65,7 +64,7 @@ Aca podemos ver algunas capturas del prototipado.
 ![imagen a mostrar](/src/imagenes_readme/alta3.jpg)
 ![imagen a mostrar](/src/imagenes_readme/alta4.jpg)
 
-[link]:(https://www.figma.com/file/g3kEQxFNlSXtLf3doY15lw/DataHP?node-id=51%3A76)
+(https://www.figma.com/file/g3kEQxFNlSXtLf3doY15lw/DataHP?node-id=51%3A76)
 
 #### Testeos de usabilidad
 
@@ -93,3 +92,18 @@ Resultados :
 Por lo anterior decidimos cambiarlo.
 
 ![imagen a mostrar](/src/imagenes_readme/capturapag2.jpg)
+
+El testeo a nuestra segunda historia de usuraio
+
+2- Yo como poco conocedor de la historia de harry potter quiero conocer los personajes
+
+Criterios de aceptacion:
+Que al hacer click en personajes, pueda conocer los personajes a traves de una imagen y su  nombre.
+
+Resultados:
+
+4 de los 5 usuarios nos indicaron que seria buena idea agregar un selector para ordenar los personajes de la A a la Z y viceversa.
+
+Decidimos agregar esa opcion
+
+![imagen a mostrar](/src/imagenes_readme/ordenazza.jpg)
