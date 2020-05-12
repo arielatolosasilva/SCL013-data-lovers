@@ -10,7 +10,6 @@ Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Ha
 su afán de conquistar el mundo mágico.
 
 
-
 ## 2. Resumen del proyecto
 A pesar que a nivel mundial, el Mundo de Harry Potter es extremadamente conocido,
 hay personas que conocen poco y nada sobre este tema, nosotras nos centramos en ellos para
@@ -19,6 +18,7 @@ su conocimiento sobre Harry Potter y sus personajes.
 
 ### Diseño de la Interfaz de Usuario
 Para la creacion de nuestra aplicacion, nos basamos en historias de usuarios.
+
 
 #### Historias de usuarios
 1- Yo como poco conocedor de la historia de harry potter quiero conocer la historia y si es posible ver un video resumen.
@@ -43,8 +43,10 @@ Que al hacer click en la foto de cada personaje, aparezcan ciertas caracteristic
 
 
 #### Prototipo de baja fidelidad
+
 El prototipo de baja fidelidad fue realizado en Invision
-![indexpage](src/prototipadobaja.jpg)
+
+![imagen](/src/imagenes_readme/prototipadobaja.jpg)
 
 
 
@@ -52,15 +54,16 @@ El prototipo de baja fidelidad fue realizado en Invision
 
 
 #### Prototipo de alta fidelidad
+
 Despues de realizar un testeo al prototipio de baja fidelidad, se realizaron varios cambios que
 estan plasmados en el prototipo de alta filedidad que realizamos con figma
 
 Aca podemos ver algunas capturas del prototipado.
 
-![imagen a mostrar](imagenes_readme/alta1.jpg)
-![imagen a mostrar](imagenes_readme/alta2.jpg)
-![imagen a mostrar](imagenes_readme/alta3.jpg)
-![imagen a mostrar](imagenes_readme/alta4.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta1.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta2.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta3.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta4.jpg)
 
 [link]:(https://www.figma.com/file/g3kEQxFNlSXtLf3doY15lw/DataHP?node-id=51%3A76)
 
@@ -80,8 +83,8 @@ Criterios de aceptacion:
 Que al hacer click al boton entrar, pueda ver el texto con un pequeño resumen de la historia y al hacer click
 en reproducir, visualice el video resumen.
 
-![imagen a mostrar](imagenes_readme/alta1.jpg)
-![imagen a mostrar](imagenes_readme/alta2.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta1.jpg)
+![imagen a mostrar](/src/imagenes_readme/alta2.jpg)
 
 Resultados :
 
@@ -90,4 +93,4 @@ Resultados :
 
 Por lo anterior decidimos cambiarlo.
 
-![imagen a mostrar](imagenes_readme/capturapag2.jpg)
+![imagen a mostrar](/src/imagenes_readme/capturapag2.jpg)
