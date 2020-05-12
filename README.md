@@ -98,7 +98,7 @@ Por lo anterior decidimos cambiarlo.
 
 ![imagen a mostrar](/src/imagenes_readme/capturapag2.jpg)
 
-El testeo a nuestra segunda historia de usuraio
+El testeo a nuestra segunda historia de usuario
 
 2- Yo como poco conocedor de la historia de harry potter quiero conocer los personajes
 
