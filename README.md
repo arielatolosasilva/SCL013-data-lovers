@@ -1,4 +1,4 @@
-
+![imagen a mostrar](/src/imagenes_readme/inicioreadme.jpg)
 
 ## 1. Preámbulo
 
@@ -83,7 +83,6 @@ Criterios de aceptacion:
 Que al hacer click al boton entrar, pueda ver el texto con un pequeño resumen de la historia y al hacer click
 en reproducir, visualice el video resumen.
 
-![imagen a mostrar](/src/imagenes_readme/alta1.jpg)
 ![imagen a mostrar](/src/imagenes_readme/alta2.jpg)
 
 Resultados :
