@@ -242,7 +242,10 @@ justify-content: flex-end;
 
 /* ---------------- MEDIAQUERIES ------------------ */
 
-  @media only screen and (max-width: 60em){
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+ {
 
 
 
@@ -327,8 +330,6 @@ justify-content: flex-end;
 
     flex-direction: column;
     justify-content: center;
-   /* background-position: center;
-    background-size: cover;*/
     width: 40vw;
     margin-left: -20px;
     margin: 5px 10px 20px 5px;
@@ -353,7 +354,14 @@ justify-content: flex-end;
   font-size: 12px;
 }
 }
- @media (min-width: 768px) and (max-width: 1024px){
 
-}
+@media  (min-width: 768px) {
+
+  #enter {
+    font-size: 25px;
+    line-height: 39px;
+    width: 16vw;
+  }
+  }
+
 
