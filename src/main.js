@@ -13,6 +13,7 @@ const textSummaryHistory = "Harry Potter es una serie de novelas fantásticas es
 crearElement('p', 'textPageTwo', 'pageTwo', '', textSummaryHistory);
 crearElement('div', 'pageThree', 'root');
 
+
 //empieza creacion modal
 //function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
   crearElement('div', 'modalCharacters', 'root','modal');
@@ -28,11 +29,18 @@ crearElement('div', 'pageThree', 'root');
 const header= document.getElementById("header");
 const pag1= document.getElementById("pageOne");
 const pag2= document.getElementById("pageTwo");
+
+
+
 const buttonEnter= document.getElementById("enter");
 const buttonMenuCharacters = document.getElementById("menuCharacters");
 const buttonExitModal = document.getElementById("closeModal");
 
+const btnHome= document.getElementById("btnHome");
+
 const modal = document.getElementById('modalCharacters');
+
+
 header.style.display = "none"; //esconder
 pag2.style.display = "none"; //esconder
 
@@ -42,7 +50,17 @@ buttonEnter.addEventListener ("click", function() {
   header.style.display="flex";
   pag2.style.display="block";
   pag1.style.display="none";
-  //document.getElementById('videoPresentation').play();
+  document.getElementById('videoPresentation').play();
+
+});
+
+btnHome.addEventListener ("click", function() {
+  const pag3= document.getElementById("pageThree");
+  header.style.display="flex";
+  pag2.style.display="block";
+  pag1.style.display="none";
+  pag3.style.display="none";
+  document.getElementById('videoPresentation').play();
 
 });
 
@@ -51,6 +69,7 @@ buttonEnter.addEventListener ("click", function() {
 buttonMenuCharacters.addEventListener ("click", function() {
 
   document.getElementById("pageTwo").style.display="none";
+  document.getElementById('videoPresentation').pause();
   removeElement('pageThree');
   crearElement('div', 'pageThree', 'root');
   getDataCharacters();
@@ -105,7 +124,7 @@ function getDataCharacters() {//empiez
   crearElement('div', 'selector', 'filter','select');
 
   crearElement('select', 'filterGenero', 'selector','Filtroselect');
-  crearElement('option', '', 'filterGenero', '', "Seleccione un género",'','all');
+  crearElement('option', '', 'filterGenero', '', "Seleccione género",'','all');
   crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
   crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
 
@@ -113,7 +132,7 @@ function getDataCharacters() {//empiez
 
 
  crearElement('select', 'filterRol', 'selector2','Filtroselect');
-  crearElement('option', '', 'filterRol', '', "Seleccione un rol",'','all');
+  crearElement('option', '', 'filterRol', '', "Seleccione rol",'','all');
   crearElement('option', '', 'filterRol', '', "Estudiante",'','student');
   crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
   crearElement('option', '', 'filterRol', '', "Otros",'','other');
@@ -121,7 +140,7 @@ function getDataCharacters() {//empiez
   crearElement('div', 'selector3', 'filter','select');
 
   crearElement('select', 'filterOrdenAlfabetic', 'selector3','Filtroselect');
-  crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione un orden",'','all');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione orden",'','all');
   crearElement('option', '', 'filterOrdenAlfabetic', '', "Ascendente (A-Z)",'','az');
   crearElement('option', '', 'filterOrdenAlfabetic', '', "Descendente (Z-A)",'','za');
 
@@ -183,7 +202,7 @@ selectOrder.addEventListener("change", function() {
 
 
 function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
-
+  crearElement('div', 'padre', 'pageThree', 'padreParchment');
   for (let i = 0; i < arrayCharacterPotter.length; ++i) {
 
     let id_div = 'd' + i;
@@ -191,7 +210,7 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
     let id_img = 'imgPers' + i;
 
 
-    crearElement('div', id_div, 'pageThree', 'parchment');
+    crearElement('div', id_div, 'padre', 'parchment');
     crearElement('IMG', id_img, id_div, 'characterCard', '', arrayCharacterPotter[i].image);
     crearElement('p', id_parrf, id_div, 'parrafoName', arrayCharacterPotter[i].name);
 
