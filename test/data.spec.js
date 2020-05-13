@@ -1,7 +1,6 @@
 import data from '../src/data.js';
 
-const input = [
-  {
+const input = [{
     name: 'Harry Potter',
     gender: 'male',
     house: 'Gryffindor',
@@ -53,8 +52,7 @@ const input = [
 ];
 
 
-const arrayGenderMale = [
-  {
+const arrayGenderMale = [{
     name: 'Harry Potter',
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
   },
@@ -71,8 +69,7 @@ const arrayGenderMale = [
     image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
   },
 ];
-const arrayGenderFemale = [
-  {
+const arrayGenderFemale = [{
     name: 'Luna Lovegood',
     image: 'http://hp-api.herokuapp.com/images/luna.jpg',
   },
@@ -81,8 +78,7 @@ const arrayGenderFemale = [
     image: 'http://hp-api.herokuapp.com/images/hermione.jpeg',
   },
 ];
-const arrayFilterStudent =[
-  {
+const arrayFilterStudent = [{
     name: 'Harry Potter',
     image: 'http://hp-api.herokuapp.com/images/harry.jpg',
   },
@@ -102,21 +98,16 @@ const arrayFilterStudent =[
 
 ];
 
-const arrayFilterTeacher=[
-  {
-    name: 'Severus Snape',
-    image: 'http://hp-api.herokuapp.com/images/snape.jpg',
-  },
-];
+const arrayFilterTeacher = [{
+  name: 'Severus Snape',
+  image: 'http://hp-api.herokuapp.com/images/snape.jpg',
+}, ];
 
-const arrayFilterOther=[
-  {
-    name: 'Lord Voldemort',
-    image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
-  },
-]
-const input2=[
-  {
+const arrayFilterOther = [{
+  name: 'Lord Voldemort',
+  image: 'http://hp-api.herokuapp.com/images/voldemort.jpg',
+}, ]
+const input2 = [{
     name: 'Harry Potter',
   },
   {
@@ -138,8 +129,7 @@ const input2=[
 
 ]
 
-const arrayOrderAz=[
-  {
+const arrayOrderAz = [{
     name: 'Cedric Diggory',
   },
   {
@@ -159,28 +149,27 @@ const arrayOrderAz=[
   },
 ]
 
-  const arrayOrderZa=[
-    {
-      name: 'Severus Snape',
-    },
+const arrayOrderZa = [{
+    name: 'Severus Snape',
+  },
 
-    {
-      name: 'Luna Lovegood',
-    },
-    {
-      name: 'Lord Voldemort',
-    },
+  {
+    name: 'Luna Lovegood',
+  },
+  {
+    name: 'Lord Voldemort',
+  },
 
-    {
-      name: 'Hermione Granger',
-    },
-    {
-      name: 'Harry Potter',
-    },
-    {
-      name: 'Cedric Diggory',
-    }
-  ]
+  {
+    name: 'Hermione Granger',
+  },
+  {
+    name: 'Harry Potter',
+  },
+  {
+    name: 'Cedric Diggory',
+  }
+]
 
 
 
@@ -198,11 +187,11 @@ describe('data', () => {
       expect(typeof window.data.filterGender).toBe('function');
     });
     test('Deberia retornar un array de objetos con la propiedad gender = male', () => {
-      expect( window.data.filterGender( input,'male')).toEqual(arrayGenderMale);
+      expect(window.data.filterGender(input, 'male')).toEqual(arrayGenderMale);
 
     });
-    test('Deberia retornar un array de objetos con la propiedad gender = female', () =>{
-      expect( window.data.filterGender(input,'female')).toEqual(arrayGenderFemale);
+    test('Deberia retornar un array de objetos con la propiedad gender = female', () => {
+      expect(window.data.filterGender(input, 'female')).toEqual(arrayGenderFemale);
     });
 
   });
@@ -213,14 +202,14 @@ describe('data', () => {
       expect(typeof window.data.filterRol).toBe('function');
     });
     test('Deberia retornar un array de objetos con la propiedad hogwartsStudent: true', () => {
-      expect( window.data.filterRol( input,'student')).toEqual(arrayFilterStudent);
+      expect(window.data.filterRol(input, 'student')).toEqual(arrayFilterStudent);
 
     });
-    test('Deberia retornar un array de objetos con la propiedad hogwartsStaff: true', () =>{
-      expect( window.data.filterRol(input,'teacher')).toEqual(arrayFilterTeacher);
+    test('Deberia retornar un array de objetos con la propiedad hogwartsStaff: true', () => {
+      expect(window.data.filterRol(input, 'teacher')).toEqual(arrayFilterTeacher);
     });
-    test('Deberia retornar un array de objetos con la propiedad hogwartsStaff: false y hogwartsStaff: false', () =>{
-      expect( window.data.filterRol(input,'other')).toEqual(arrayFilterOther);
+    test('Deberia retornar un array de objetos con la propiedad hogwartsStaff: false y hogwartsStaff: false', () => {
+      expect(window.data.filterRol(input, 'other')).toEqual(arrayFilterOther);
     });
   });
 
@@ -230,7 +219,7 @@ describe('data', () => {
       expect(typeof window.data.filterOrderAsc).toBe('function');
     });
     test('Deberia retornar un array de objetos ordenados de la A a la Z', () => {
-      expect( window.data.filterOrderAsc( input2)).toEqual(arrayOrderAz);
+      expect(window.data.filterOrderAsc(input2)).toEqual(arrayOrderAz);
     });
   });
 
@@ -240,9 +229,8 @@ describe('data', () => {
       expect(typeof window.data.filterOrderDesc).toBe('function');
     });
     test('Deberia retornar un array de objetos ordenados de la Z a la A', () => {
-      expect( window.data.filterOrderDesc( input2)).toEqual(arrayOrderZa);
+      expect(window.data.filterOrderDesc(input2)).toEqual(arrayOrderZa);
     });
   });
 
-  });
-
+});

@@ -3,11 +3,11 @@
 
 window.data = {
 
-  filterGender: function (arrayDataPotter,gender) {
+  filterGender: function (arrayDataPotter, gender) {
     const arrFilterData = [];
 
-    for (let i= 0; i<arrayDataPotter.length; i++){
-      if (arrayDataPotter[i].gender === gender){
+    for (let i = 0; i < arrayDataPotter.length; i++) {
+      if (arrayDataPotter[i].gender === gender) {
         arrFilterData.push({
           name: arrayDataPotter[i].name,
           image: arrayDataPotter[i].image
@@ -20,52 +20,52 @@ window.data = {
 
   },
 
-  filterRol: function(arrayDataPotter,rol){
+  filterRol: function (arrayDataPotter, rol) {
     const arrFilterData = [];
     if (rol == 'student') {
-      for (let i= 0; i<arrayDataPotter.length; i++){
-      if (arrayDataPotter[i].hogwartsStudent === true && arrayDataPotter[i].hogwartsStaff === false){
-           arrFilterData.push({
-             name: arrayDataPotter[i].name,
-             image: arrayDataPotter[i].image
-           });
-         }
+      for (let i = 0; i < arrayDataPotter.length; i++) {
+        if (arrayDataPotter[i].hogwartsStudent === true && arrayDataPotter[i].hogwartsStaff === false) {
+          arrFilterData.push({
+            name: arrayDataPotter[i].name,
+            image: arrayDataPotter[i].image
+          });
         }
-   } else if (rol == 'teacher') {
-    for (let i= 0; i<arrayDataPotter.length; i++){
-     if (arrayDataPotter[i].hogwartsStaff === true && arrayDataPotter[i].hogwartsStudent === false){
-           arrFilterData.push({
-             name: arrayDataPotter[i].name,
-             image: arrayDataPotter[i].image
-           });
-         }
+      }
+    } else if (rol == 'teacher') {
+      for (let i = 0; i < arrayDataPotter.length; i++) {
+        if (arrayDataPotter[i].hogwartsStaff === true && arrayDataPotter[i].hogwartsStudent === false) {
+          arrFilterData.push({
+            name: arrayDataPotter[i].name,
+            image: arrayDataPotter[i].image
+          });
         }
-   }  else if (rol == 'other') {
-    for (let i= 0; i<arrayDataPotter.length; i++){
-    if (arrayDataPotter[i].hogwartsStaff === false && arrayDataPotter[i].hogwartsStudent === false){
-      arrFilterData.push({
-        name: arrayDataPotter[i].name,
-        image: arrayDataPotter[i].image
-      });
+      }
+    } else if (rol == 'other') {
+      for (let i = 0; i < arrayDataPotter.length; i++) {
+        if (arrayDataPotter[i].hogwartsStaff === false && arrayDataPotter[i].hogwartsStudent === false) {
+          arrFilterData.push({
+            name: arrayDataPotter[i].name,
+            image: arrayDataPotter[i].image
+          });
+        }
+      }
     }
-  }
-   }
     return arrFilterData;
   },
 
- filterOrderAsc: function (arrayDataPotter) {
-    arrayDataPotter.sort( (a, b) => {
+  filterOrderAsc: function (arrayDataPotter) {
+    arrayDataPotter.sort((a, b) => {
 
       return a.name > b.name ? 1 : -1;
 
-   });
+    });
 
-   return arrayDataPotter;
+    return arrayDataPotter;
   },
   filterOrderDesc: function (arrayDataPotter) {
-     arrayDataPotter.reverse();
+    arrayDataPotter.reverse();
 
-     return arrayDataPotter;
+    return arrayDataPotter;
   }
 
 
@@ -73,5 +73,3 @@ window.data = {
 
 export default window.data;
 //cambios*/
-
-
