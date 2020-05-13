@@ -16,27 +16,27 @@ crearElement('div', 'pageThree', 'root');
 
 //empieza creacion modal
 //function crearElement(tipo, id, id_padre, clase, texto, rutaSrc) {
-  crearElement('div', 'modalCharacters', 'root','modal');
-  crearElement('div', 'contentModal', 'modalCharacters','cModal');
-  crearElement('div', 'headerModal', 'contentModal','hModal');
-  crearElement('p', 'closeModal', 'headerModal', '','X');
-  crearElement('div', 'bodyModal', 'contentModal','bModal');
-  crearElement('div', 'footerModal', 'contentModal','fModal');
+crearElement('div', 'modalCharacters', 'root', 'modal');
+crearElement('div', 'contentModal', 'modalCharacters', 'cModal');
+crearElement('div', 'headerModal', 'contentModal', 'hModal');
+crearElement('p', 'closeModal', 'headerModal', '', 'X');
+crearElement('div', 'bodyModal', 'contentModal', 'bModal');
+crearElement('div', 'footerModal', 'contentModal', 'fModal');
 
 
 //termina creacion modal
 
-const header= document.getElementById("header");
-const pag1= document.getElementById("pageOne");
-const pag2= document.getElementById("pageTwo");
+const header = document.getElementById("header");
+const pag1 = document.getElementById("pageOne");
+const pag2 = document.getElementById("pageTwo");
 
 
 
-const buttonEnter= document.getElementById("enter");
+const buttonEnter = document.getElementById("enter");
 const buttonMenuCharacters = document.getElementById("menuCharacters");
 const buttonExitModal = document.getElementById("closeModal");
 
-const btnHome= document.getElementById("btnHome");
+const btnHome = document.getElementById("btnHome");
 
 const modal = document.getElementById('modalCharacters');
 
@@ -44,31 +44,31 @@ const modal = document.getElementById('modalCharacters');
 header.style.display = "none"; //esconder
 pag2.style.display = "none"; //esconder
 
-buttonEnter.addEventListener ("click", function() {
+buttonEnter.addEventListener("click", function () {
   crearElement('div', 'contentVideo', 'pageTwo');
   crearElement('video', "videoPresentation", "contentVideo", '', '', "./video/hpv.mp4");
-  header.style.display="flex";
-  pag2.style.display="block";
-  pag1.style.display="none";
+  header.style.display = "flex";
+  pag2.style.display = "block";
+  pag1.style.display = "none";
   document.getElementById('videoPresentation').play();
 
 });
 
-btnHome.addEventListener ("click", function() {
-  const pag3= document.getElementById("pageThree");
-  header.style.display="flex";
-  pag2.style.display="block";
-  pag1.style.display="none";
-  pag3.style.display="none";
+btnHome.addEventListener("click", function () {
+  const pag3 = document.getElementById("pageThree");
+  header.style.display = "flex";
+  pag2.style.display = "block";
+  pag1.style.display = "none";
+  pag3.style.display = "none";
   document.getElementById('videoPresentation').play();
 
 });
 
 
 
-buttonMenuCharacters.addEventListener ("click", function() {
+buttonMenuCharacters.addEventListener("click", function () {
 
-  document.getElementById("pageTwo").style.display="none";
+  document.getElementById("pageTwo").style.display = "none";
   document.getElementById('videoPresentation').pause();
   removeElement('pageThree');
   crearElement('div', 'pageThree', 'root');
@@ -76,14 +76,14 @@ buttonMenuCharacters.addEventListener ("click", function() {
 
 });
 
-buttonExitModal.addEventListener ("click", function() {
+buttonExitModal.addEventListener("click", function () {
   modal.style.display = "none";
   removeElement('dataCharacters');
 });
 
 
 
-function crearElement(tipo, id, id_padre, clase, texto, rutaSrc,optionValue) {
+function crearElement(tipo, id, id_padre, clase, texto, rutaSrc, optionValue) {
   let elememto = document.createElement(tipo);
   if (typeof id !== 'undefined' && id != '') {
     elememto.id = id;
@@ -95,8 +95,8 @@ function crearElement(tipo, id, id_padre, clase, texto, rutaSrc,optionValue) {
   if (typeof rutaSrc !== 'undefined') {
     elememto.src = rutaSrc;
   }
-  if(tipo === 'option' && typeof optionValue !== 'undefined'){
-    elememto.value=optionValue;
+  if (tipo === 'option' && typeof optionValue !== 'undefined') {
+    elememto.value = optionValue;
   }
 
   if (typeof texto !== 'undefined') {
@@ -110,98 +110,98 @@ function crearElement(tipo, id, id_padre, clase, texto, rutaSrc,optionValue) {
 
 function removeElement(elementId) {
 
-  if (document.getElementById(elementId)) {//solo cuando exista el elemento se podrá borrar o remover del html(formato del if(está instruccion es true o false)
+  if (document.getElementById(elementId)) { //solo cuando exista el elemento se podrá borrar o remover del html(formato del if(está instruccion es true o false)
     var element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
   }
 
 }
 
-function getDataCharacters() {//empiez
+function getDataCharacters() { //empiez
 
   // crearElement('p', 'tittlePageThree', 'pageThree', '', "Filtrar por");
   crearElement('div', 'filter', 'pageThree');
-  crearElement('div', 'selector', 'filter','select');
+  crearElement('div', 'selector', 'filter', 'select');
 
-  crearElement('select', 'filterGenero', 'selector','Filtroselect');
-  crearElement('option', '', 'filterGenero', '', "Seleccione género",'','all');
-  crearElement('option', '', 'filterGenero', '', "Femenino",'','female');
-  crearElement('option', '', 'filterGenero', '', "Masculino",'','male');
+  crearElement('select', 'filterGenero', 'selector', 'Filtroselect');
+  crearElement('option', '', 'filterGenero', '', "Seleccione género", '', 'all');
+  crearElement('option', '', 'filterGenero', '', "Femenino", '', 'female');
+  crearElement('option', '', 'filterGenero', '', "Masculino", '', 'male');
 
-  crearElement('div', 'selector2', 'filter','select');
-
-
- crearElement('select', 'filterRol', 'selector2','Filtroselect');
-  crearElement('option', '', 'filterRol', '', "Seleccione rol",'','all');
-  crearElement('option', '', 'filterRol', '', "Estudiante",'','student');
-  crearElement('option', '', 'filterRol', '', "Profesor",'','teacher');
-  crearElement('option', '', 'filterRol', '', "Otros",'','other');
-
-  crearElement('div', 'selector3', 'filter','select');
-
-  crearElement('select', 'filterOrdenAlfabetic', 'selector3','Filtroselect');
-  crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione orden",'','all');
-  crearElement('option', '', 'filterOrdenAlfabetic', '', "Ascendente (A-Z)",'','az');
-  crearElement('option', '', 'filterOrdenAlfabetic', '', "Descendente (Z-A)",'','za');
-
-  listCharacterPotter (harryData);//cuando hace click en personajes
+  crearElement('div', 'selector2', 'filter', 'select');
 
 
-//de aqui para adelante es cuando el usuario cambia el selector genero
+  crearElement('select', 'filterRol', 'selector2', 'Filtroselect');
+  crearElement('option', '', 'filterRol', '', "Seleccione rol", '', 'all');
+  crearElement('option', '', 'filterRol', '', "Estudiante", '', 'student');
+  crearElement('option', '', 'filterRol', '', "Profesor", '', 'teacher');
+  crearElement('option', '', 'filterRol', '', "Otros", '', 'other');
+
+  crearElement('div', 'selector3', 'filter', 'select');
+
+  crearElement('select', 'filterOrdenAlfabetic', 'selector3', 'Filtroselect');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Seleccione orden", '', 'all');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Ascendente (A-Z)", '', 'az');
+  crearElement('option', '', 'filterOrdenAlfabetic', '', "Descendente (Z-A)", '', 'za');
+
+  listCharacterPotter(harryData); //cuando hace click en personajes
+
+
+  //de aqui para adelante es cuando el usuario cambia el selector genero
   const selectGender = document.getElementById("filterGenero");
 
-  selectGender.addEventListener("change", function() {//cuando cambie el selector genero
+  selectGender.addEventListener("change", function () { //cuando cambie el selector genero
 
-    removeData();//invocamos funcion que remueve todos los div de las tarjetas de los personajes generados en el bucle
-    if(selectGender.value == 'all'){//aqui el usuario eligió todos los generos
-      listCharacterPotter (harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
-    }else{
-      let arrayFiltrado = window.data.filterGender(harryData,selectGender.value);
+    removeData(); //invocamos funcion que remueve todos los div de las tarjetas de los personajes generados en el bucle
+    if (selectGender.value == 'all') { //aqui el usuario eligió todos los generos
+      listCharacterPotter(harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
+    } else {
+      let arrayFiltrado = window.data.filterGender(harryData, selectGender.value);
       listCharacterPotter(arrayFiltrado);
       //si no es all, se invoca la funcion del data js llamada filterGender, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
     }
   });
 
-//de aqui para adelante es cuando el usuario cambia el selector rol
+  //de aqui para adelante es cuando el usuario cambia el selector rol
 
 
-const selectRol = document.getElementById("filterRol");
+  const selectRol = document.getElementById("filterRol");
 
-selectRol.addEventListener("change", function() {//cuando cambie el selector genero
+  selectRol.addEventListener("change", function () { //cuando cambie el selector genero
 
-  removeData();//invocamos funcion que remueve todos los div de las tarjetas de los personajes generados en el bucle
-  if(selectRol.value == 'all'){//aqui el usuario eligió todos los generos
-    listCharacterPotter (harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
-  }else{
-  let arrayFiltrado = window.data.filterRol(harryData,selectRol.value);
-   listCharacterPotter(arrayFiltrado);
-    //si no es all, se invoca la funcion del data js llamada filterGender, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
-  }
-});
+    removeData(); //invocamos funcion que remueve todos los div de las tarjetas de los personajes generados en el bucle
+    if (selectRol.value == 'all') { //aqui el usuario eligió todos los roles
+      listCharacterPotter(harryData); //por lo tanto invocamos la funcion listCharacterPotter pasando como parametros toda la data
+    } else {
+      let arrayFiltrado = window.data.filterRol(harryData, selectRol.value);
+      listCharacterPotter(arrayFiltrado);
+      //si no es all, se invoca la funcion del data js llamada filterrol, pasando como parametro data completa(harryData) y el value del selector seleccionado por el usuario
+    }
+  });
 
-const selectOrder = document.getElementById("filterOrdenAlfabetic");
-selectOrder.addEventListener("change", function() {
+  const selectOrder = document.getElementById("filterOrdenAlfabetic");
+  selectOrder.addEventListener("change", function () {
 
-  removeData();
-  if(selectOrder.value == 'all'){
-    listCharacterPotter (harryData);
-  }else if(selectOrder.value == 'az'){
-   let arrayFiltrado = window.data.filterOrderAsc(harryData);
-   listCharacterPotter(arrayFiltrado);
+    removeData();
+    if (selectOrder.value == 'all') {
+      listCharacterPotter(harryData);
+    } else if (selectOrder.value == 'az') {
+      let arrayFiltrado = window.data.filterOrderAsc(harryData);
+      listCharacterPotter(arrayFiltrado);
 
-  }else if(selectOrder.value == 'za'){
-   let arrayFiltradoASC = window.data.filterOrderAsc(harryData);
-   let arrayFiltrado = window.data.filterOrderDesc(arrayFiltradoASC);
-   listCharacterPotter(arrayFiltrado);
-  }
-});
+    } else if (selectOrder.value == 'za') {
+      let arrayFiltradoASC = window.data.filterOrderAsc(harryData);
+      let arrayFiltrado = window.data.filterOrderDesc(arrayFiltradoASC);
+      listCharacterPotter(arrayFiltrado);
+    }
+  });
 
-}//ter
-
-
+} //ter
 
 
-function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo filtrado o arreglo con toda la data
+
+
+function listCharacterPotter(arrayCharacterPotter) { //aqui recibo el arreglo filtrado o arreglo con toda la data
   crearElement('div', 'padre', 'pageThree', 'padreParchment');
   for (let i = 0; i < arrayCharacterPotter.length; ++i) {
 
@@ -214,14 +214,14 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
     crearElement('IMG', id_img, id_div, 'characterCard', '', arrayCharacterPotter[i].image);
     crearElement('p', id_parrf, id_div, 'parrafoName', arrayCharacterPotter[i].name);
 
-    const btnImg= document.getElementById(id_div);
-    const contador= i;
+    const btnImg = document.getElementById(id_div);
+    const contador = i;
 
-    btnImg.addEventListener ("click", function() {//click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
+    btnImg.addEventListener("click", function () { //click imagen pergamino para levantar modal, en donde remueve el body del modal para cargar nuevo elemento clickeado
 
       removeElement('dataCharacters');
       modal.style.display = "flex";
-      crearElement('div', 'dataCharacters', 'bodyModal','infoPersonajes');
+      crearElement('div', 'dataCharacters', 'bodyModal', 'infoPersonajes');
       crearElement('IMG', "imagenMo", "dataCharacters", 'cardModal', '', arrayCharacterPotter[contador].image);
       crearElement('p', 'nameModal', 'dataCharacters', '', "Nombre:" + " " + arrayCharacterPotter[contador].name);
       crearElement('p', 'nameModal', 'dataCharacters', '', "Fecha nacimiento:" + " " + arrayCharacterPotter[contador].dateOfBirth);
@@ -238,39 +238,39 @@ function listCharacterPotter (arrayCharacterPotter){//aqui recibo el arreglo fil
 
 }
 
-function removeData(){
-  for (let i= 0; i<harryData.length; i++){
+function removeData() {
+  for (let i = 0; i < harryData.length; i++) {
     let id_div = 'd' + i;
     removeElement(id_div);
   }
 }
 // TRADUCCION DATOS DEL MODAL
-function traslation(word){
-  if(word == "green"){
+function traslation(word) {
+  if (word == "green") {
     return "verde";
 
-  }else if(word == "brown"){
+  } else if (word == "brown") {
     return "café";
 
-  }else if (word == "blue"){
+  } else if (word == "blue") {
     return "azul";
 
-  }else if (word == "grey"){
+  } else if (word == "grey") {
     return "gris";
 
-  }else if (word == "black"){
+  } else if (word == "black") {
     return "negro";
 
-  }else if(word == "red"){
+  } else if (word == "red") {
     return "rojo";
 
-  }else if(word == "blonde"){
+  } else if (word == "blonde") {
     return "rubio";
 
-  }else if(word == "bald"){
+  } else if (word == "bald") {
     return "sin pelo"
 
-  }else{
+  } else {
     return "no registra"
   }
 }
