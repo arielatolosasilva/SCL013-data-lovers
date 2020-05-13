@@ -209,8 +209,9 @@ li {
 }
 
 /* ---------------- MEDIAQUERIES ------------------ */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-@media only screen and (max-width: 60em) {
+
 
   #logoOne {
     width: 309px;
@@ -243,8 +244,12 @@ li {
     height: 14vw;
   }
 
+
+
   li {
     padding: 0px;
+
+
   }
 
   #logoTwo {
@@ -254,6 +259,7 @@ li {
 
   #textPageTwo {
     width: 304px;
+
   }
 
   #videoPresentation {
@@ -269,6 +275,7 @@ li {
   .select {
     width: 30vw;
     margin: 5px;
+
   }
 
   .Filtroselect {
@@ -309,11 +316,25 @@ li {
     height: 400px;
   }
 
+  #contentModal {
+    width: 150px;
+    height: 400px;
+  }
+
   .cardModal {
     margin-left: 7px;
   }
 
   #nameModal {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  #enter {
+    font-size: 25px;
+    line-height: 39px;
+    width: 16vw;
   }
 }
